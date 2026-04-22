@@ -2,74 +2,47 @@
 layout: page
 ---
 <div class="course">
-  {% if page.instructor or page.term or page.location or page.time %}
+  {% if page.audience or page.course_type or page.teaching_format %}
     <div class="course-info">
-      {% if page.instructor %}
-        <p><strong>Instructor:</strong> {{ page.instructor }}</p>
+      {% if page.audience %}
+        <p><strong>Audience:</strong> {{ page.audience }}</p>
       {% endif %}
-
-      {% if page.term %}
-        <p><strong>Term:</strong> {{ page.term }}</p>
+      {% if page.course_type %}
+        <p><strong>Course Type:</strong> {{ page.course_type }}</p>
       {% endif %}
-
-      {% if page.location %}
-        <p><strong>Location:</strong> {{ page.location }}</p>
-      {% endif %}
-
-      {% if page.time %}
-        <p><strong>Time:</strong> {{ page.time }}</p>
+      {% if page.teaching_format %}
+        <p><strong>Format:</strong> {{ page.teaching_format }}</p>
       {% endif %}
     </div>
   {% endif %}
 
-  {{ content }}
-
-  {% if page.schedule %}
-    <h2>Schedule</h2>
-    <table class="table table-sm table-responsive">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Date</th>
-          <th>Topic</th>
-          <th>Materials</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for entry in page.schedule %}
-          <tr>
-            <td>{{ entry.week }}</td>
-            <td>{{ entry.date }}</td>
-            <td>
-              {% if entry.topic %}
-                <strong>{{ entry.topic }}</strong>
-              {% endif %}
-              {% if entry.description %}
-                <div class="schedule-description">{{ entry.description | markdownify }}</div>
-              {% endif %}
-            </td>
-            <td>
-              {% if entry.materials %}
-                <ul class="schedule-materials">
-                  {% for material in entry.materials %}
-                    <li>
-                      {% if material.url %}
-                        {% if material.url contains '://' %}
-                          <a href="{{ material.url }}" target="_blank">{{ material.name }}</a>
-                        {% else %}
-                          <a href="{{ material.url | relative_url }}" target="_blank">{{ material.name }}</a>
-                        {% endif %}
-                      {% else %}
-                        {{ material.name }}
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  {% if page.topics %}
+    <div class="course-topic-list course-topic-list-page">
+      {% for topic in page.topics %}
+        <span class="course-topic">{{ topic }}</span>
+      {% endfor %}
+    </div>
   {% endif %}
+
+  {% if page.modules %}
+    <div class="course-module-grid">
+      {% for module in page.modules %}
+        <section class="course-module">
+          <h2>{{ module.title }}</h2>
+          {% if module.description %}
+            <p>{{ module.description }}</p>
+          {% endif %}
+          {% if module.topics %}
+            <ul class="course-module-list">
+              {% for topic in module.topics %}
+                <li>{{ topic }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {{ content }}
 </div>

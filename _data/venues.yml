@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"ADTS":
+  url: https://onlinelibrary.wiley.com/journal/25130390
+  color: "#244b8a"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"IJP":
+  url: https://www.sciencedirect.com/journal/international-journal-of-pharmaceutics
+  color: "#0b7d69"
 
-"Vision":
-  color: "#009f36"
+"JMCB":
+  url: https://pubs.rsc.org/en/journals/journalissues/tb
+  color: "#b55d1f"

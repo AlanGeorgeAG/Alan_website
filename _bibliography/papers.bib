@@ -1,115 +1,54 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+@article{george2026solubility,
+  abbr              = {ADTS},
+  title             = {Machine Learning Meets Molecular Dynamics: Accurate Prediction of Polymer Solubility Parameters},
+  author            = {George, Alan and Sierka, Marek},
+  journal           = {Advanced Theory and Simulations},
+  year              = {2026},
+  volume            = {9},
+  number            = {3},
+  pages             = {e01865},
+  doi               = {10.1002/adts.202501865},
+  html              = {https://doi.org/10.1002/adts.202501865},
+  pdf               = {machine-learning-meets-molecular-dynamics.pdf},
+  summary           = {This paper develops a hybrid molecular-dynamics and machine-learning workflow to predict Hildebrand solubility parameters for molecules and polymers. Molecular-dynamics-derived targets are combined with molecular, quantum-chemical, and chain-specific descriptors, and Gaussian process regression with recursive feature elimination gives the strongest predictive performance.},
+  note              = {Focus: MD-derived Hildebrand solubility parameters, descriptor engineering, and nonlinear regression for rapid polymer-solvent compatibility screening.},
+  abstract          = {The Hildebrand solubility parameter is a cornerstone descriptor for predicting thermodynamic compatibility in polymer-solvent systems, yet its determination for polymers remains experimentally challenging, and traditional group contribution estimates lack accuracy and transferability. Here, we present an integrated framework that combines atomistic molecular dynamics (MD) simulations with machine learning (ML) to predict solubility parameter values across diverse molecular and polymeric systems. Solubility parameter values derived from MD simulations provide training targets for ML models built on molecular, quantum-chemical, and chain-specific descriptors. By systematically applying feature-selection strategies, Pearson correlation filtering, principal component analysis, and recursive feature elimination, we construct optimized descriptor subsets tailored to each learning algorithm. Benchmarking across regression methods reveals that Gaussian process regression with recursive feature elimination achieves the best performance, with R^2 = 0.94, MAE = 0.54, and RMSE = 0.96 MPa^1/2 on the test set, consistently outperforming both empirical group-contribution methods and conventional regressors. Our results highlight the critical role of descriptor curation and nonlinear models in capturing the complexity of polymer thermodynamics. This hybrid MD-ML strategy establishes a generalizable and computationally efficient pathway for predicting solubility parameters, enabling rapid screening of solubility and miscibility for both known and novel molecules and polymers.},
+  selected          = {true}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@article{westhoff2025pea,
+  abbr              = {IJP},
+  title             = {Amino acid-equipped Poly(ester amide) nanoparticles for improved encapsulation efficiency of lipophilic anti-inflammatory 6BIGOE based on molecular dynamic simulations},
+  author            = {Westhoff, Jan and Weber, Christine and Bachmann, Vivien and G{\"o}ppert, Natalie E. and Peric, Milica and George, Alan and Sierka, Marek and Hoeppener, Stephanie and Vilotijevic, Ivan and Schubert, Ulrich S. and Werz, Oliver and Fischer, Dagmar},
+  journal           = {International Journal of Pharmaceutics},
+  year              = {2025},
+  volume            = {684},
+  pages             = {126182},
+  doi               = {10.1016/j.ijpharm.2025.126182},
+  html              = {https://www.sciencedirect.com/science/article/pii/S0378517325010191},
+  pdf               = {amino-acid-equipped-pea-nanoparticles.pdf},
+  summary           = {This study compares amino-acid-based poly(ester amide) nanoparticles with PLGA for encapsulating the lipophilic anti-inflammatory compound 6BIGOE. The work shows improved miscibility and encapsulation efficiency for the poly(ester amide) systems, together with good biocompatibility and anti-inflammatory performance.},
+  note              = {My contribution focused on molecular-dynamics analysis of polymer-drug interactions, including Flory-Huggins parameter trends, Gibbs free energy changes, and RDF-based interpretation of drug-polymer compatibility.},
+  abstract          = {The efficient delivery of lipophilic drugs still remains a major challenge in pharmaceutical nanotechnology, particularly due to limitations in drug loading, drug stability, and the biocompatibility of polymeric nanocarriers. Poly(ester amide)s represent a promising class of biodegradable materials and were investigated in the present study for the delivery of the anti-inflammatory, lipophilic drug 6-bromoindirubin-3'-glycerol-oxime ether (6BIGOE). Poly(ester amide)s incorporating the aromatic and non-aromatic alpha-amino acids l-phenylalanine or l-valine, next to glycolic acid as ester component, were synthesized by ring-opening polymerization and used to prepare nanoparticles via nanoemulsification in comparison to the widely used poly(lactic-co-glycolic acid) (PLGA). All polymers formed monodisperse nanoparticles of around 200 nm with anionic surfaces and comparable drug release profiles. Advantageously, the encapsulation efficiency of 6BIGOE was significantly improved to 63-78% using poly(ester amide)s compared to 42% for PLGA, confirmed by molecular dynamic simulations revealing enhanced interactions and miscibility between poly(ester amide)s and 6BIGOE. Poly(ester amide) nanoparticles showed higher glass transition temperatures compared to PLGA, indicating an improved thermo-mechanical stability. In human monocytes, 6BIGOE-loaded poly(ester amide) nanoparticles demonstrated excellent biocompatibility with pronounced anti-inflammatory activity by modulating pro- and anti-inflammatory mediators, which highlights their potential as a versatile and tunable platform for the delivery of lipophilic anti-inflammatory drugs.},
+  selected          = {true}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+@article{klepsch2025matching,
+  abbr              = {JMCB},
+  title             = {Matching drug and polymer for efficient delivery of anti-inflammatory drugs: PLGA, polyesteramides, and acetalated dextran},
+  author            = {Klepsch, Lea C. and Dahlke, Philipp and Behnke, Mira and Tsarenko, Ekaterina and G{\"o}ppert, Natalie E. and Klemm, Paul and Meyer, Jakob and George, Alan and Chi, Mingzhe and Czaplewska, Justyna A. and Vollrath, Antje and Weber, Christine and Jordan, Paul M. and Schubert, Stephanie and Hoeppener, Stephanie and Nischang, Ivo and Sierka, Marek and Werz, Oliver and Schubert, Ulrich S.},
+  journal           = {Journal of Materials Chemistry B},
+  year              = {2025},
+  volume            = {13},
+  pages             = {15516--15529},
+  doi               = {10.1039/D5TB01949D},
+  html              = {https://pubs.rsc.org/en/content/articlehtml/2025/tb/d5tb01949d},
+  pdf               = {matching-drug-and-polymer.pdf},
+  summary           = {This collaborative study compares PLGA, polyesteramides, and acetalated dextran as nanocarriers for anti-inflammatory compounds MF-15 and BRP-201. It shows that favorable polymer-drug miscibility alone does not guarantee biological efficacy, so formulation performance has to be assessed together with release and biological response.},
+  note              = {My contribution focused on molecular-dynamics analysis of polymer-drug miscibility, including Flory-Huggins parameters, Gibbs free energy changes, and RDF plots used to interpret compatibility trends.},
+  abstract          = {The hydrochalcone derivative MF-15 and the synthetically derived BRP-201 are potent anti-inflammatory active pharmaceutical ingredients (APIs) that suffer from poor bioavailability. This necessitates their incorporation into drug delivery systems. To address this limitation, we investigated four polymeric carrier materials. The poly(ester amide)s poly(3-benzylmorpholine-2,5-dione) (PPheG) and poly(3-isopropyl-morpholine-2,5-dione) (PValG), the benchmark poly(lactic-co-glycolic acid) (PLGA), and the polysaccharide acetalated dextran (Ac-Dex) were used to formulate nanoparticles via nanoprecipitation. The nanoparticles had sizes of around 110 to 190 nm with negative zeta potentials. Although atomistic molecular dynamics (MD) simulations predicted enhanced miscibility of PPheG and PValG with MF-15, the highest loading capacity was achieved with Ac-Dex (4.2 wt%). None of the MF-15-loaded particles elicited a biologic response in human M2 monocyte-derived macrophages. In contrast, all BRP-201-loaded formulations demonstrated potent anti-inflammatory effects in human neutrophils. Overall, the findings demonstrate that polymer-drug miscibility and favorable physicochemical properties alone are insufficient to predict in vitro efficacy, highlighting the importance of kinetic and formulation-dependent factors in the successful delivery of anti-inflammatory agents.},
+  selected          = {true}
 }

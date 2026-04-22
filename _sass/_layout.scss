@@ -35,8 +35,21 @@ body.sticky-bottom-footer {
 
 // Profile
 .profile {
-  img {
+  img,
+  .profile-portrait {
     width: 100%;
+    display: block;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: transparent;
+  }
+
+  .profile-portrait {
+    min-height: 420px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
   }
 }
 
@@ -56,3 +69,57 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+.about-lead {
+  font-size: 1.12rem;
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+  max-width: 48rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.about-card {
+  background: linear-gradient(180deg, rgba(11, 125, 105, 0.08), rgba(36, 75, 138, 0.02));
+  border: 1px solid var(--global-divider-color);
+  border-radius: 18px;
+  padding: 1.1rem 1.15rem;
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: var(--global-text-color-light);
+  }
+}
+
+.link-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.5rem 0 2rem;
+
+  a {
+    border: 1px solid rgba(11, 125, 105, 0.22);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+  }
+}

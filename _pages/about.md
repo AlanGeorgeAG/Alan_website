@@ -2,33 +2,62 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Doctoral researcher in computational materials science at Friedrich Schiller Universität Jena.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: alan-street-profile.jpeg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Friedrich Schiller Universität Jena</p>
+    <p>07743 Jena, Germany</p>
+    <p><a href="mailto:alangeorge272@gmail.com">alangeorge272@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/alan-george-92057a312">LinkedIn</a> · <a href="https://orcid.org/0009-0007-5232-4428">ORCID</a></p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<div class="about-lead">
+  I am a doctoral researcher in <strong>Computational Material Science</strong> at <strong>Friedrich Schiller Universität Jena</strong>, where I work at the interface of molecular simulation, polymer-based drug delivery, and machine learning for materials prediction.
+</div>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My current research combines <strong>molecular dynamics simulations</strong>, <strong>machine learning</strong>, <strong>web development</strong>, and <strong>backend development</strong> to study polymer-small molecule compatibility, encapsulation behavior, and solubility-related descriptors. Recent work includes simulations of polymer-drug systems, development of predictive models for Hildebrand solubility parameters, and deployment of scientific machine learning workflows for the <strong>PolyDrug</strong> platform.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<div class="about-grid">
+  <div class="about-card">
+    <h3>Research</h3>
+    <p>Polymer-drug matching, molecular dynamics simulation, Flory-Huggins analysis, solubility prediction, and computational screening of materials properties.</p>
+  </div>
+  <div class="about-card">
+    <h3>Teaching</h3>
+    <p>I teach <strong>Data Processing</strong> and <strong>Machine Learning</strong> to bachelor's and master's students, with an emphasis on practical workflows, modeling decisions, and interpretable results.</p>
+  </div>
+  <div class="about-card">
+    <h3>Methods I Use</h3>
+    <p><strong>Molecular Dynamics</strong>, <strong>Density Functional Theory</strong>, <strong>Machine Learning</strong>, and scientific software development for computational materials and drug-delivery research.</p>
+  </div>
+</div>
+
+<div class="link-pills">
+  <a href="mailto:alangeorge272@gmail.com">Email</a>
+  <a href="https://www.linkedin.com/in/alan-george-92057a312">LinkedIn</a>
+  <a href="https://orcid.org/0009-0007-5232-4428">ORCID</a>
+  <a href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+</div>
+
+## Current Focus
+
+- Molecular dynamics simulations of polymers, small molecules, and polymer-drug systems
+- Machine learning models for material-property prediction, including Hildebrand solubility parameters
+- Computational support for drug delivery design, web tools, and physicochemical interpretation
+
+## Selected Academic Highlights
+
+- Poster presentation at **Turbomole: Today and Tomorrow**, University of Oxford, United Kingdom, 2024
+- Poster presentation at **WATOC 2025**, Oslo, Norway, 2025
+- Research spanning polymer nanocarriers, anti-inflammatory drug delivery, and hybrid MD-ML methods

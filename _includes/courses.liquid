@@ -1,36 +1,41 @@
 {% if site.teachings %}
   <div class="courses">
-    {% assign courses_by_year = site.teachings | sort: 'year' | reverse | group_by: 'year' %}
-
-    {% for year_group in courses_by_year %}
-      <h2 class="year">{{ year_group.name }}</h2>
-      <div class="course-list">
-        {% assign year_courses = year_group.items | sort: 'term' %}
-        {% for course in year_courses %}
-          <div class="course-item">
-            <h3 class="course-title">
-              <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
-            </h3>
-
-            <div class="course-meta">
-              {% if course.term %}
-                <span class="course-term">{{ course.term }}</span>
-              {% endif %}
-
-              {% if course.instructor %}
-                <span class="course-instructor">{{ course.instructor }}</span>
+    {% assign sorted_courses = site.teachings | sort: 'order' %}
+    <div class="course-list">
+      {% for course in sorted_courses %}
+        <div class="course-item">
+          <div class="course-card-top">
+            <div>
+              <h3 class="course-title">
+                <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
+              </h3>
+              {% if course.audience %}
+                <div class="course-meta">{{ course.audience }}</div>
               {% endif %}
             </div>
-
-            {% if course.description %}
-              <div class="course-description">
-                {{ course.description | markdownify }}
-              </div>
+            {% if course.course_type %}
+              <span class="course-badge">{{ course.course_type }}</span>
             {% endif %}
           </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
+
+          {% if course.description %}
+            <div class="course-description">
+              {{ course.description | markdownify }}
+            </div>
+          {% endif %}
+
+          {% if course.topics %}
+            <div class="course-topic-list">
+              {% for topic in course.topics %}
+                <span class="course-topic">{{ topic }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <a class="course-link" href="{{ course.url | relative_url }}">View course overview</a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% else %}
   <p>No courses available yet.</p>

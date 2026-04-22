@@ -9,14 +9,12 @@
   content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"
 >
 
-<!-- Bootstrap & MDB -->
+<!-- Local CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
-<link
-  rel="stylesheet"
-  href="{{ site.third_party_libraries.mdb.url.css }}"
-  integrity="{{ site.third_party_libraries.mdb.integrity.css }}"
-  crossorigin="anonymous"
->
 
 {% if page.pretty_table %}
   <!-- Bootstrap Table -->
@@ -32,12 +30,6 @@
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
 <link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url | bust_file_cache }}">
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
->
 
 <!-- Code Syntax Highlighting -->
 <link
@@ -76,6 +68,9 @@
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+<link rel="prefetch" href="{{ '/cv/' | relative_url }}">
+<link rel="prefetch" href="{{ '/publications/' | relative_url }}">
+<link rel="prefetch" href="{{ '/teaching/' | relative_url }}">
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
@@ -88,6 +83,7 @@
     id="highlight_theme_dark"
   >
   <script>
+    localStorage.setItem("theme", "dark");
     initTheme();
   </script>
 {% endif %}
